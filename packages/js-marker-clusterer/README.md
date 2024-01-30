@@ -5,14 +5,17 @@
 this package levereges the [js-marker-clusterer][js-marker-clusterer] to add clustering support to
 [AGM][agm].
 
+this package update peer dependency from "js-marker-clusterer": "^1.0.0" to gmaps-marker-clusterer for prevent deprecate addDomListener
+"gmaps-marker-clusterer": "github:gmaps-marker-clusterer/gmaps-marker-clusterer#53f09b21b464626c1f047cac9782bf58f61d935c",
+and compatible with "@agm/js-marker-clusterer" just update the import path.
+
 ## Installation
 
-@agm/js-marker-clusterer has a peer depedency on [js-marker-clusterer][js-marker-clusterer]
+@agm/js-marker-clusterer has a peer depedency on [gmaps-marker-clusterer][js-marker-clusterer]
 
 ```shell
-npm install js-marker-clusterer @agm/js-marker-clusterer --save
-# or
-yarn add js-marker-clusterer @agm/js-marker-clusterer
+npm install git+https://github.com/gmaps-marker-clusterer/gmaps-marker-clusterer.git#53f09b21b464626c1f047cac9782bf58f61d935c @agm-extend/js-marker-clusterer --save
+
 ```
 
 ## Usage
@@ -26,7 +29,7 @@ yarn add js-marker-clusterer @agm/js-marker-clusterer
 
     // add these imports
     import { AgmCoreModule } from '@agm/core';
-    import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+    import { AgmJsMarkerClustererModule } from '@agm-extend/js-marker-clusterer';
 
     @NgModule({
       declarations: [

@@ -1,7 +1,7 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 
-import 'js-marker-clusterer';
+import 'gmaps-marker-clusterer';
 
 import { AgmMarker, GoogleMapsAPIWrapper, MarkerManager } from '@agm/core';
 import { Marker } from '@agm/core/services/google-maps-types';

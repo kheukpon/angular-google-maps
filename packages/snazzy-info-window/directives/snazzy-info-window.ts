@@ -181,7 +181,7 @@ export class AgmSnazzyInfoWindow implements AfterViewInit, OnDestroy, OnChanges 
   ngAfterViewInit() {
     const m = this._manager != null ? this._manager.getNativeMarker(this._marker) : null;
     this._snazzyInfoWindowInitialized = this._loader.load()
-      .then(() => require('snazzy-info-window'))
+      .then(() => require('@morr/snazzy-info-window'))
       .then((module: any) => Promise.all([module, m, this._wrapper.getNativeMap()]))
       .then((elems) => {
         const options: any = {
